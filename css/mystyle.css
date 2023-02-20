@@ -81,3 +81,16 @@
   font-weight: bold;
   width: 30rem;
 }
+
+/* ABOUT US */
+#aboutUs {
+  background-image: url(../img/About-Us.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 26rem;
+}
+
+#aboutUs>div {
+  color: #FFFFFF;
+  width: 41rem;
+}
