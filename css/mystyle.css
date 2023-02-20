@@ -99,3 +99,16 @@
   color: #FFFFFF;
   width: 41rem;
 }
+
+/* BANNER SATISFIED CLIENTS */
+#satisfiedClients {
+  background-image: url(../img/sfondo-persone-soddisfatte.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+#satisfiedClients>div {
+  color: #FFFFFF;
+  margin: 4rem 7rem;
+}
