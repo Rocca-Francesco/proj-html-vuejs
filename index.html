@@ -38,7 +38,7 @@
         <nav class="navbar navbar-expand-lg bg-light px-2">
             <div class="container-fluid">
                 <!-- zona logo -->
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" id="logoIcon" href="#">
                     <img src="./img/header/logo.svg" alt="Logo" width="120" height="24"
                         class="d-inline-block align-text-top mb-2">
                 </a>
@@ -115,8 +115,9 @@
     </header>
 
     <!-- SEZIONE CENTRALE DELLA PAGINA -->
-    <main class="px-2">
+    <main class="px-1">
         <!-- CAROUSEL -->
+        <!-- DA FARE: sistemazione colori e carosello funzionale -->
         <section id="carousel" class="text-light d-flex align-items-center">
             <span>
                 <img class="iconsCarousel" src="./img/carousel/left-arrow.svg" alt="prev-arrow">
@@ -132,9 +133,53 @@
         </section>
 
         <!-- pelicula studio - this is what we do -->
-        <section>
-            <div>
-
+        <section class="my-5">
+            <!-- intestazione sezione -->
+            <div class="text-center">
+                <h3 class="titlesSections">PELICULA STUDIO</h3>
+                <h2 class="fw-bold">THIS IS WHAT WE DO</h2>
+            </div>
+            <!-- cards -->
+            <div class="container-md">
+                <div class="row">
+                    <!-- DA FARE: generazione cards con vue.js -->
+                    <div class="col-4 my-3 text-center">
+                        <img class="cartdsIcons" src="./img/pelicula-studio/01-cinepresa.svg" alt="cinepresa">
+                        <h4 class="cardsTitles">ARRAY OF EQUIPMENT</h4>
+                        <span class="cardsTexts">Lorem ipsum dolor amet, consectetur adipiscing. Pellenter ultricies
+                            justo tellus.</span>
+                    </div>
+                    <div class="col-4 my-3 text-center">
+                        <img class="cartdsIcons" src="./img/pelicula-studio/02-3D-glasses.svg" alt="3D-glasses">
+                        <h4 class="cardsTitles">NEW TECHNOLOGIES</h4>
+                        <span class="cardsTexts">Lorem ipsum dolor amet, consectetur adipiscing. Pellenter ultricies
+                            justo tellus.</span>
+                    </div>
+                    <div class="col-4 my-3 text-center">
+                        <img class="cartdsIcons" src="./img/pelicula-studio/03-masks.svg" alt="masks">
+                        <h4 class="cardsTitles">VERSATILE ACTORS</h4>
+                        <span class="cardsTexts">Lorem ipsum dolor amet, consectetur adipiscing. Pellenter ultricies
+                            justo tellus.</span>
+                    </div>
+                    <div class="col-4 my-3 text-center">
+                        <img class="cartdsIcons" src="./img/pelicula-studio/04-sedia-director.svg" alt="sedia-director">
+                        <h4 class="cardsTitles">TOP DIRECTORS</h4>
+                        <span class="cardsTexts">Lorem ipsum dolor amet, consectetur adipiscing. Pellenter ultricies
+                            justo tellus.</span>
+                    </div>
+                    <div class="col-4 my-3 text-center">
+                        <img class="cartdsIcons" src="./img/pelicula-studio/05-ciak.svg" alt="ciak">
+                        <h4 class="cardsTitles">MINUTE EDITING</h4>
+                        <span class="cardsTexts">Lorem ipsum dolor amet, consectetur adipiscing. Pellenter ultricies
+                            justo tellus.</span>
+                    </div>
+                    <div class="col-4 my-3 text-center">
+                        <img class="cartdsIcons" src="./img/pelicula-studio/06-pellicola.svg" alt="pellicola">
+                        <h4 class="cardsTitles">VERSATILE ACTORS</h4>
+                        <span class="cardsTexts">Lorem ipsum dolor amet, consectetur adipiscing. Pellenter ultricies
+                            justo tellus.</span>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
