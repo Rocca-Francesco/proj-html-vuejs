@@ -1,3 +1,8 @@
+/* generals */
+* {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
 /* NAVBAR */
 .icons {
   width: 1.2rem;
@@ -7,6 +12,10 @@
 
 #divisionLine {
   height: 1.4rem;
-  border: 1px solid #666666;
+  border: 1px solid rgba(66, 66, 66, 0.5);
   margin: 0.2rem 1rem 0 1rem;
+}
+
+#navbarSupportedContent {
+  font-size: 0.7rem;
 }
