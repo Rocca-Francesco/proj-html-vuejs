@@ -24,12 +24,17 @@
 .cardsTitles {
   font-size: 0.8rem;
   font-weight: bold;
-  margin: 1.2rem;
+  margin: 1rem 1rem 0.5rem 1rem;
 }
 
 .cardsTexts {
   font-size: 0.8rem;
   color: #666666;
+}
+
+.cartdsBigIcons {
+  width: 100%;
+  height: 19rem;
 }
 
 /* NAVBAR */
