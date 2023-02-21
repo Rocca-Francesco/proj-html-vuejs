@@ -182,3 +182,14 @@
 .loghiIcons {
   width: 8rem;
 }
+
+/* CONTACT US */
+
+.contactInput {
+  width: 48%;
+}
+
+.contactText {
+  width: 100%;
+  display: block;
+}
