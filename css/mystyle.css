@@ -187,9 +187,23 @@
 
 .contactInput {
   width: 48%;
+  color: #666666;
+  background-color: #F2F2F2;
+  border: 5px solid #F2F2F2;
+
 }
 
 .contactText {
   width: 100%;
+  color: #666666;
+  background-color: #F2F2F2;
+  border: 5px solid #F2F2F2;
   display: block;
+  resize: none;
+}
+
+.btnGeneral.btnForm {
+  width: 100%;
+  color: white;
+  background-color: black;
 }
