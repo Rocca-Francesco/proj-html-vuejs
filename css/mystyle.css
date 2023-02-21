@@ -228,7 +228,7 @@ footer {
 }
 
 .titlesSections.footerTitles {
-  color: #F2F2F2;
+  color: #FFFFFF;
 }
 
 .footerList {
@@ -236,4 +236,31 @@ footer {
   padding: 0;
   color: #666666;
   font-size: 0.8rem;
+}
+
+.contactInput.blackInput {
+  width: 75%;
+  background-color: #1c1c1c;
+  border: 5px solid #1c1c1c;
+}
+
+#footerLocation::before {
+  content: url(../img/footer/footer-location-dot-solid.svg);
+  display: inline-block;
+  width: 0.5rem;
+  margin-right: 0.8rem;
+}
+
+#footerCall::before {
+  content: url(../img/footer/footer-phone-solid.svg);
+  display: inline-block;
+  width: 0.5rem;
+  margin-right: 0.8rem;
+}
+
+#footerEmail::before {
+  content: url(../img/footer/footer-envelope-soli.svg);
+  display: inline-block;
+  width: 0.5rem;
+  margin-right: 0.8rem;
 }
