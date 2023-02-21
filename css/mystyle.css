@@ -221,3 +221,19 @@
   color: white;
   background-color: black;
 }
+
+/* FOOTER */
+footer {
+  background-color: #111111;
+}
+
+.titlesSections.footerTitles {
+  color: #F2F2F2;
+}
+
+.footerList {
+  list-style: none;
+  padding: 0;
+  color: #666666;
+  font-size: 0.8rem;
+}
