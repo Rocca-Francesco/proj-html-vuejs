@@ -165,3 +165,20 @@
 .dot.active {
   background-color: #FFFFFF;
 }
+
+/* BANNER LOGHI SPONSOR */
+#loghiSponsor {
+  background-image: url(../img/area-loghi/sfondo-area-loghi.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#loghiSponsor>div {
+  color: #FFFFFF;
+  margin: 4rem;
+}
+
+.loghiIcons {
+  width: 8rem;
+}
