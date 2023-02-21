@@ -117,3 +117,51 @@
   color: #FFFFFF;
   margin: 4rem 7rem;
 }
+
+/* AREA CITAZIONI */
+#areaCitazioni {
+  background-image: url(../img/area-citazioni/sfondo-citazioni.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 28rem;
+}
+
+#areaCitazioni>div {
+  width: 40rem;
+  color: #FFFFFF;
+}
+
+.citIcons {
+  width: 2rem;
+  height: 2rem;
+  margin: 2rem;
+}
+
+.citUser {
+  margin: 0.4rem 0 0 0.8rem;
+}
+
+.citTitles {
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin: 0;
+  line-height: 0;
+}
+
+.citRoles {
+  font-size: 0.5rem;
+}
+
+.dot {
+  display: inline-block;
+  background-color: #666666;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  margin: 1rem 0.2rem;
+}
+
+.dot.active {
+  background-color: #FFFFFF;
+}
