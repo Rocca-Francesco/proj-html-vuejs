@@ -16,46 +16,6 @@
   font-weight: bold;
 }
 
-.cartdsIcons {
-  width: 4rem;
-  height: 4rem;
-}
-
-.cardsTitles {
-  font-size: 0.8rem;
-  font-weight: bold;
-  margin: 1rem 1rem 0.5rem 1rem;
-}
-
-.newsTitles {
-  margin: 0.5rem 0;
-}
-
-.newsDate {
-  display: block;
-  margin: 1rem 0 0.5rem 0;
-}
-
-.cardsTexts {
-  font-size: 0.8rem;
-  color: #666666;
-}
-
-.cartdsBigIcons {
-  width: 100%;
-  height: 19rem;
-}
-
-.newsCards {
-  width: 100%;
-  height: 13rem;
-}
-
-.cartdsTeam {
-  width: 10rem;
-  height: 12rem;
-}
-
 /* NAVBAR */
 #logoIcon {
   margin-right: 8rem;
@@ -75,6 +35,10 @@
 
 #navbarSupportedContent {
   font-size: 0.7rem;
+}
+
+.dropdown>a::after {
+  content: url(../img/header/arrow-down.svg);
 }
 
 /* CAROUSEL */
@@ -106,6 +70,23 @@
   width: 30rem;
 }
 
+/* PELICULA STUDIO */
+.cardsIcons {
+  width: 4rem;
+  height: 4rem;
+}
+
+.cardsTitles {
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin: 1rem 1rem 0.5rem 1rem;
+}
+
+.cardsTexts {
+  font-size: 0.8rem;
+  color: #666666;
+}
+
 /* ABOUT US */
 #aboutUs {
   background-image: url(../img/About-Us.jpg);
@@ -119,6 +100,12 @@
   width: 41rem;
 }
 
+/* YOUR WATCHLIST */
+.cardsBigIcons {
+  width: 100%;
+  height: 17rem;
+}
+
 /* BANNER SATISFIED CLIENTS */
 #satisfiedClients {
   background-image: url(../img/sfondo-persone-soddisfatte.jpg);
@@ -130,6 +117,12 @@
 #satisfiedClients>div {
   color: #FFFFFF;
   margin: 4rem 7rem;
+}
+
+/* THE PERICUROS */
+.cardsTeam {
+  width: 10rem;
+  height: 12rem;
 }
 
 /* AREA CITAZIONI */
@@ -178,6 +171,21 @@
 
 .dot.active {
   background-color: #FFFFFF;
+}
+
+/* LATEST NEWS */
+.newsTitles {
+  margin: 0.5rem 0;
+}
+
+.newsDate {
+  display: block;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.newsCards {
+  width: 100%;
+  height: 15rem;
 }
 
 /* BANNER LOGHI SPONSOR */
@@ -236,6 +244,11 @@ footer {
   padding: 0;
   color: #666666;
   font-size: 0.8rem;
+}
+
+.footerList>li:hover {
+  color: #F2F2F2;
+  fill: #F2F2F2;
 }
 
 .contactInput.blackInput {
