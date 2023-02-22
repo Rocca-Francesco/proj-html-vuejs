@@ -34,11 +34,37 @@
 }
 
 #navbarSupportedContent {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 
-.dropdown>a::after {
-  content: url(../img/header/arrow-down.svg);
+.downArrow {
+  width: 0.6rem;
+}
+
+.nav-item>a {
+  position: relative;
+}
+
+.navDownMenu {
+  position: absolute;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+  top: 3.6rem;
+  width: 14rem;
+}
+
+.navDownItem {
+  background-color: #111111;
+  color: #FFFFFF;
+  border-bottom: 1px solid #666666;
+  padding: 0.4rem;
+  font-size: 0.8rem;
+  width: 11rem;
+}
+
+.navDownItem.long {
+  width: auto;
 }
 
 /* CAROUSEL */
