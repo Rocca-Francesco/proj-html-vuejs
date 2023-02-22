@@ -47,12 +47,18 @@
                     <div class="justify-content-center" id="navbarSupportedContent">
                         <!-- zona link centrale -->
                         <ul class="navbar-nav mb-2 mb-lg-0 fw-semibold align-items-center">
-                            <li v-for="list in navbarLists" class="nav-item">
-                                <a class="nav-link active" href="#">
+                            <li v-for="(list, index) in navbarLists" class="nav-item">
+                                <a class="nav-link active" :class="(list.dropdownMenu) ? 'downArrow' : ''"
+                                    @click="showDropDown(index)" href="#">
                                     {{list.titolo}}
-
                                 </a>
+                                <ul v-show="list.dropdownMenu" class="navDownMenu">
+                                    <li class="navDownItem">SERVICES</li>
+                                    <li class="navDownItem long">OUR WORK FLOW</li>
+                                    <li class="navDownItem">VIDEO THUMBNAIL TYPE</li>
+                                </ul>
                             </li>
+
 
                             <!-- <li class="nav-item">
                                 <a class="nav-link active" href="#">HOME</a>
@@ -60,17 +66,7 @@
                             <li class="nav-item">
                                 <a class="nav-link active" href="#">BLOG</a>
                             </li>
-                            <li class="nav-item active">
-                                <a class="nav-link active" href="#" role="button">
-                                    PAGES
-                                    <img class="downArrow" src="./img/header/arrow-down.svg" alt="downArrow">
-                                </a>
-                                <ul class="navDownMenu">
-                                    <li class="navDownItem">SERVICES</li>
-                                    <li class="navDownItem long">OUR WORK FLOW</li>
-                                    <li class="navDownItem">VIDEO THUMBNAIL TYPE</li>
-                                </ul>
-                            </li>
+                            
                             <li class="nav-item">
                                 <a class="nav-link active" href="#">ABOUT</a>
                             </li>

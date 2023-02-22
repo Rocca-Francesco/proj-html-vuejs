@@ -19,7 +19,7 @@ createApp({
         },
         {
           titolo: "PAGES",
-          dropdownMenu: true
+          dropdownMenu: true,
         },
         {
           titolo: "ABOUT",
@@ -80,6 +80,12 @@ createApp({
           ]
         },
       ]
+    }
+  },
+
+  methods: {
+    showDropDown(index) {
+      this.navbarLists[index].dropdownMenu = !this.navbarLists[index].dropdownMenu;
     }
   }
 }).mount('#app')

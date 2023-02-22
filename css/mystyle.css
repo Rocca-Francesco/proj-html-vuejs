@@ -37,13 +37,16 @@
   font-size: 0.8rem;
 }
 
-.downArrow {
-  width: 0.6rem;
-}
-
-.nav-item>a {
+.downArrow::after {
+  content: "";
+  background-image: url(../img/header/arrow-down.svg);
+  background-size: 15px 20px;
+  display: inline-block;
+  width: 13px;
+  height: 13px;
   position: relative;
 }
+
 
 .navDownMenu {
   position: absolute;
@@ -284,21 +287,21 @@ footer {
   border: 5px solid #1c1c1c;
 }
 
-.footerLocation::before {
+#footerLocation::before {
   content: url(../img/footer/footer-location-dot-solid.svg);
   display: inline-block;
   width: 0.5rem;
   margin-right: 0.8rem;
 }
 
-.footerCall::before {
+#footerCall::before {
   content: url(../img/footer/footer-phone-solid.svg);
   display: inline-block;
   width: 0.5rem;
   margin-right: 0.8rem;
 }
 
-.footerEmail::before {
+#footerEmail::before {
   content: url(../img/footer/footer-envelope-soli.svg);
   display: inline-block;
   width: 0.5rem;
