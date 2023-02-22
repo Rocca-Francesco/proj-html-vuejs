@@ -56,7 +56,31 @@ createApp({
           nome: "instagram",
           logo: "./img/header/logo-instagram.svg"
         }
+      ],
+
+      utilitiesLists: [
+        {
+          title: "INFORMATION",
+          links: [
+            "Product Support",
+            "Checkout",
+            "Report Abuse",
+            "Redeem Voucher",
+            "Order Status"
+          ]
+        },
+        {
+          title: "USEFUL LINKS",
+          links: [
+            "Policies & Rules",
+            "Privacy Policy",
+            "License Policy",
+            "My Account",
+            "Locality"
+          ]
+        },
       ]
     }
   }
-}).mount('.navbar')
+}).mount('#app')
+

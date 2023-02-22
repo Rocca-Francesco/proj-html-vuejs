@@ -266,6 +266,7 @@ footer {
 }
 
 .footerList {
+  display: block;
   list-style: none;
   padding: 0;
   color: #666666;
@@ -283,21 +284,21 @@ footer {
   border: 5px solid #1c1c1c;
 }
 
-#footerLocation::before {
+.footerLocation::before {
   content: url(../img/footer/footer-location-dot-solid.svg);
   display: inline-block;
   width: 0.5rem;
   margin-right: 0.8rem;
 }
 
-#footerCall::before {
+.footerCall::before {
   content: url(../img/footer/footer-phone-solid.svg);
   display: inline-block;
   width: 0.5rem;
   margin-right: 0.8rem;
 }
 
-#footerEmail::before {
+.footerEmail::before {
   content: url(../img/footer/footer-envelope-soli.svg);
   display: inline-block;
   width: 0.5rem;

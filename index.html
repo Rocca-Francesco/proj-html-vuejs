@@ -29,448 +29,447 @@
     <!-- my css -->
     <link rel="stylesheet" href="./css/mystyle.css">
     <!-- my js -->
-    <script type="text/javascript" src="./js/myscriptNavbar.js" defer></script>
-    <script type="text/javascript" src="./js/myscriptFooter.js" defer></script>
+    <script type="text/javascript" src="./js/myscript.js" defer></script>
 </head>
 
 <body>
-    <!-- NAVBAR -->
-    <header>
-        <nav class="navbar navbar-expand-lg bg-light px-2">
-            <div class="container-fluid">
-                <!-- zona logo -->
-                <a id="logoIcon" href="#">
-                    <img :src="attivita.logo" alt="Logo" width="140" height="30"
-                        class="d-inline-block align-text-top mb-2">
-                </a>
+    <div id="app">
+        <!-- NAVBAR -->
+        <header>
+            <nav class="navbar navbar-expand-lg bg-light px-2">
+                <div class="container-fluid">
+                    <!-- zona logo -->
+                    <a id="logoIcon" href="#">
+                        <img :src="attivita.logo" alt="Logo" width="140" height="30"
+                            class="d-inline-block align-text-top mb-2">
+                    </a>
 
-                <div class="justify-content-center" id="navbarSupportedContent">
-                    <!-- zona link centrale -->
-                    <ul class="navbar-nav mb-2 mb-lg-0 fw-semibold align-items-center">
-                        <li v-for="list in navbarLists" class="nav-item">
-                            <a class="nav-link active" href="#">
-                                {{list.titolo}}
+                    <div class="justify-content-center" id="navbarSupportedContent">
+                        <!-- zona link centrale -->
+                        <ul class="navbar-nav mb-2 mb-lg-0 fw-semibold align-items-center">
+                            <li v-for="list in navbarLists" class="nav-item">
+                                <a class="nav-link active" href="#">
+                                    {{list.titolo}}
 
-                            </a>
-                        </li>
+                                </a>
+                            </li>
 
-                        <!-- <li class="nav-item">
-                            <a class="nav-link active" href="#">HOME</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">BLOG</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link active" href="#" role="button">
-                                PAGES
-                                <img class="downArrow" src="./img/header/arrow-down.svg" alt="downArrow">
-                            </a>
-                            <ul class="navDownMenu">
-                                <li class="navDownItem">SERVICES</li>
-                                <li class="navDownItem long">OUR WORK FLOW</li>
-                                <li class="navDownItem">VIDEO THUMBNAIL TYPE</li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">ABOUT</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">CONTACTS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">GALLERY</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link active" href="#" role="button">
-                                SHOP
-                                <img class="downArrow" src="./img/header/arrow-down.svg" alt="downArrow">
-                            </a>
-                            <ul class="navDownMenu">
-                                <li class="navDownItem">SERVICES</li>
-                                <li class="navDownItem long">OUR WORK FLOW</li>
-                                <li class="navDownItem">VIDEO THUMBNAIL TYPE</li>
-                            </ul>
-                        </li> -->
-                    </ul>
+                            <!-- <li class="nav-item">
+                                <a class="nav-link active" href="#">HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">BLOG</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link active" href="#" role="button">
+                                    PAGES
+                                    <img class="downArrow" src="./img/header/arrow-down.svg" alt="downArrow">
+                                </a>
+                                <ul class="navDownMenu">
+                                    <li class="navDownItem">SERVICES</li>
+                                    <li class="navDownItem long">OUR WORK FLOW</li>
+                                    <li class="navDownItem">VIDEO THUMBNAIL TYPE</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">ABOUT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">CONTACTS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">GALLERY</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link active" href="#" role="button">
+                                    SHOP
+                                    <img class="downArrow" src="./img/header/arrow-down.svg" alt="downArrow">
+                                </a>
+                                <ul class="navDownMenu">
+                                    <li class="navDownItem">SERVICES</li>
+                                    <li class="navDownItem long">OUR WORK FLOW</li>
+                                    <li class="navDownItem">VIDEO THUMBNAIL TYPE</li>
+                                </ul>
+                            </li> -->
+                        </ul>
 
-                </div>
-                <!-- search and social zone -->
-                <div class="d-flex">
-                    <div id="searchbar">
-                        <img src="./img/header/lens-searchbar.svg" alt="search">
                     </div>
-                    <span id="divisionLine" class="align-self-center"></span>
-                    <div id="socials">
-                        <img class="icons" v-for="utility in socialUtilities" :src="utility.logo" :alt="utility.nome">
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- SEZIONE CENTRALE DELLA PAGINA -->
-    <main class="px-1">
-        <!-- CAROUSEL -->
-        <!-- DA FARE: sistemazione colori e carosello funzionale -->
-        <section id="carousel" class="text-light d-flex align-items-center">
-            <span>
-                <img class="iconsCarousel" src="./img/carousel/left-arrow.svg" alt="prev-arrow">
-            </span>
-            <div>
-                <h3 class="titlesSections">CINEMA STUDIO</h3>
-                <h2>ACTION AND INSPIRE PEOPLE</h2>
-                <button type="button" class="btnGeneral">READ MORE</button>
-            </div>
-            <span class="ms-auto">
-                <img class="iconsCarousel" src="./img/carousel/right-arrow.svg" alt="next-arrow">
-            </span>
-        </section>
-
-        <!-- pelicula studio - this is what we do -->
-        <section class="my-5">
-            <!-- intestazione sezione -->
-            <div class="text-center">
-                <h3 class="titlesSections">PELICULA STUDIO</h3>
-                <h2 class="fw-bold">THIS IS WHAT WE DO</h2>
-            </div>
-            <!-- cards -->
-            <div class="container-md">
-                <div class="row">
-                    <!-- DA FARE: generazione cards con vue.js -->
-                    <div class="col-4 my-3 text-center">
-                        <img class="cardsIcons" src="./img/pelicula-studio/01-cinepresa.svg" alt="cinepresa">
-                        <h4 class="cardsTitles">ARRAY OF EQUIPMENT</h4>
-                        <span class="cardsTexts">Lorem ipsum dolor amet, consectetur adipiscing. Pellenter ultricies
-                            justo tellus.</span>
-                    </div>
-                    <div class="col-4 my-3 text-center">
-                        <img class="cardsIcons" src="./img/pelicula-studio/02-3D-glasses.svg" alt="3D-glasses">
-                        <h4 class="cardsTitles">NEW TECHNOLOGIES</h4>
-                        <span class="cardsTexts">Lorem ipsum dolor amet, consectetur adipiscing. Pellenter ultricies
-                            justo tellus.</span>
-                    </div>
-                    <div class="col-4 my-3 text-center">
-                        <img class="cardsIcons" src="./img/pelicula-studio/03-masks.svg" alt="masks">
-                        <h4 class="cardsTitles">VERSATILE ACTORS</h4>
-                        <span class="cardsTexts">Lorem ipsum dolor amet, consectetur adipiscing. Pellenter ultricies
-                            justo tellus.</span>
-                    </div>
-                    <div class="col-4 my-3 text-center">
-                        <img class="cardsIcons" src="./img/pelicula-studio/04-sedia-director.svg" alt="sedia-director">
-                        <h4 class="cardsTitles">TOP DIRECTORS</h4>
-                        <span class="cardsTexts">Lorem ipsum dolor amet, consectetur adipiscing. Pellenter ultricies
-                            justo tellus.</span>
-                    </div>
-                    <div class="col-4 my-3 text-center">
-                        <img class="cardsIcons" src="./img/pelicula-studio/05-ciak.svg" alt="ciak">
-                        <h4 class="cardsTitles">MINUTE EDITING</h4>
-                        <span class="cardsTexts">Lorem ipsum dolor amet, consectetur adipiscing. Pellenter ultricies
-                            justo tellus.</span>
-                    </div>
-                    <div class="col-4 my-3 text-center">
-                        <img class="cardsIcons" src="./img/pelicula-studio/06-pellicola.svg" alt="pellicola">
-                        <h4 class="cardsTitles">VERSATILE ACTORS</h4>
-                        <span class="cardsTexts">Lorem ipsum dolor amet, consectetur adipiscing. Pellenter ultricies
-                            justo tellus.</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- about us - high quality cinematics -->
-        <section id="aboutUs" class="d-flex justify-content-end align-items-center p-5">
-            <div>
-                <h3 class="titlesSections">ABOUT US</h3>
-                <h2 class="fw-bold">HIGH QUALITY CINEMATICS</h2>
-                <p class="my-4">Orci varius penatibus et magnis dis parturient In the montes, nascetur ridiculus mus.
-                    Nulla
-                    A
-                    nisi ut mi
-                    efficitur
-                    hendrerit. nunc urna. quisque a partr hendrerit purus erat, nec dapibus sem sed. phasellus sed eli
-                    molestie, porttitor
-                    ligula of the egestas, mattis augue. quisque et rhoncus justo. suspendisse luctus pharetra eleme
-                    tcondimentum.
-                </p>
-                <button type="button" class="btnGeneral">READ MORE</button>
-            </div>
-        </section>
-
-        <!-- your watchlist - best hits movies -->
-        <section class="my-5">
-            <!-- intestazione sezione -->
-            <div class="text-center mb-4">
-                <h3 class="titlesSections">YOUR WATCHLIST</h3>
-                <h2 class="fw-bold">BEST HITS MOVIES</h2>
-            </div>
-            <!-- cards -->
-            <div class="container-md">
-                <div class="row g-4">
-                    <!-- DA FARE: generazione cards con vue.js -->
-                    <div class="col-4 my-3 text-center">
-                        <img class="cardsBigIcons" src="./img/your-watchlist/01-your-watchlist.jpg"
-                            alt="your-watchlist">
-                        <h4 class="cardsTitles">SEVENTEENTH SUMMER</h4>
-                        <span class="cardsTexts">Commercial, Music Video</span>
-                    </div>
-                    <div class="col-4 my-3 text-center">
-                        <img class="cardsBigIcons" src="./img/your-watchlist/02-your-watchlist.jpg"
-                            alt="your-watchlist">
-                        <h4 class="cardsTitles">A MESSAGE TO SPACE</h4>
-                        <span class="cardsTexts">Short Film</span>
-                    </div>
-                    <div class="col-4 my-3 text-center">
-                        <img class="cardsBigIcons" src="./img/your-watchlist/03-your-watchlist.jpg"
-                            alt="your-watchlist">
-                        <h4 class="cardsTitles">THE MOST BEAUTIFUL THING</h4>
-                        <span class="cardsTexts">Music Video</span>
-                    </div>
-                    <div class="col-4 my-3 text-center">
-                        <img class="cardsBigIcons" src="./img/your-watchlist/04-your-watchlist.jpg"
-                            alt="your-watchlist">
-                        <h4 class="cardsTitles">PERMISSION TO SPEAK</h4>
-                        <span class="cardsTexts">Documentary</span>
-                    </div>
-                    <div class="col-4 my-3 text-center">
-                        <img class="cardsBigIcons" src="./img/your-watchlist/05-your-watchlist.jpg"
-                            alt="your-watchlist">
-                        <h4 class="cardsTitles">EXPLORE OUR SPACE</h4>
-                        <span class="cardsTexts">Film Noir</span>
-                    </div>
-                    <div class="col-4 my-3 text-center">
-                        <img class="cardsBigIcons" src="./img/your-watchlist/06-your-watchlist.jpg"
-                            alt="your-watchlist">
-                        <h4 class="cardsTitles">FILM PRODUCTION</h4>
-                        <span class="cardsTexts">Blaxploitation</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- banner satisfied clients -->
-        <section id="satisfiedClients" class="d-flex justify-content-center text-center">
-            <div>
-                <h3 class="fw-bold">158</h3>
-                <h2 class="titlesSections">SATISFIED CLIENTS</h2>
-            </div>
-            <div>
-                <h3 class="fw-bold">3+</h3>
-                <h2 class="titlesSections">OUR PROJECTS</h2>
-            </div>
-            <div>
-                <h3 class="fw-bold">1,906</h3>
-                <h2 class="titlesSections">CUP OF COFFEE</h2>
-            </div>
-            <div>
-                <h3 class="fw-bold">2</h3>
-                <h2 class="titlesSections">AWARDS</h2>
-            </div>
-        </section>
-
-        <!-- the pericuros - meet the team -->
-        <section class="my-5">
-            <!-- intestazione sezione -->
-            <div class="text-center mb-4">
-                <h3 class="titlesSections">THE PERICUROS</h3>
-                <h2 class="fw-bold">MEET THE TEAM</h2>
-            </div>
-            <!-- cards -->
-            <div class="container-md">
-                <div class="row justify-content-center g-4">
-                    <!-- DA FARE: generazione cards con vue.js -->
-                    <div class="col-2 text-center">
-                        <img class="cardsTeam" src="./img/the-pericuros/Team-01.jpg" alt="team">
-                        <h4 class="cardsTitles">FABRICIO GUERRA</h4>
-                        <span class="cardsTexts">Main Director</span>
-                    </div>
-                    <div class="col-2 text-center">
-                        <img class="cardsTeam" src="./img/the-pericuros/Team-02.jpg" alt="team">
-                        <h4 class="cardsTitles">UMBERTO PAGODA</h4>
-                        <span class="cardsTexts">Main Writer</span>
-                    </div>
-                    <div class="col-2 text-center">
-                        <img class="cardsTeam" src="./img/the-pericuros/Team-03.jpg" alt="team">
-                        <h4 class="cardsTitles">GLORIA RICCASSO</h4>
-                        <span class="cardsTexts">Main Producer</span>
-                    </div>
-                    <div class="col-2 text-center">
-                        <img class="cardsTeam" src="./img/the-pericuros/Team-04.jpg" alt="team">
-                        <h4 class="cardsTitles">LIO NAPOIN</h4>
-                        <span class="cardsTexts">Cameraman</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- area citazioni -->
-        <section id="areaCitazioni" class="d-flex justify-content-center align-items-center">
-            <div>
-                <div class="text-center">
-                    <span>
-                        <img class="citIcons" src="./img/area-citazioni/virgolette.svg" alt="virgolette">
-                    </span>
-                    <p>Curabitur bibendum ex ut sapien blandit viverra. Nunc lobortis mi dui, id Etiam tempor sit amet
-                        metus
-                        in bibendum. Nunc
-                        eros risus, pellentesque a augue Pellentesque fringilla eget mi eu mollis. Mauris commodo.
-                    </p>
-                </div>
-                <span class="d-flex justify-content-center align-items-center">
-                    <img class="rounded-circle" src="./img/area-citazioni/01.jpg" alt="face-cit">
-                    <span class="citUser">
-                        <h4 class="citTitles">JOHN DOE</h4>
-                        <span class="citRoles">Designer</span>
-                    </span>
-                </span>
-                <div class="d-flex justify-content-center">
-                    <span class="dot active"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </div>
-            </div>
-        </section>
-
-        <!-- latest news - articles updated daily -->
-        <section class="my-5">
-            <!-- intestazione sezione -->
-            <div class="text-center mb-4">
-                <h3 class="titlesSections">LATEST NEWS</h3>
-                <h2 class="fw-bold">ARTICLES UPDATED DAILY</h2>
-            </div>
-            <div class="container-md">
-                <div class="row g-4">
-                    <!-- DA FARE: generazione cards con vue.js -->
-                    <div class="col-4 my-3">
-                        <img class="newsCards" src="./img/latest-news/01-latest-news.jpg" alt="latest-news">
-                        <span class="cardsTexts newsDate text-secondary">November 06, 2021 By Admin</span>
-                        <h4 class="cardsTitles newsTitles">RECAP YOUR LATEST COMPANY EVENT</h4>
-                        <span class="cardsTexts">Suspendisse dictum dictum tempor. Ut non faucibus arcu, id elementum
-                            est. Suspendisse sed</span>
-                    </div>
-                    <div class="col-4 my-3">
-                        <img class="newsCards" src="./img/latest-news/02-latest-news.jpg" alt="latest-news">
-                        <span class="cardsTexts newsDate text-secondary">May 27, 2022 By Admin</span>
-                        <h4 class="cardsTitles newsTitles">HOW TO EDIT A FILM SCORE TO SERVE</h4>
-                        <span class="cardsTexts">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                            eiusmod tempor incididunt ut</span>
-                    </div>
-                    <div class="col-4 my-3">
-                        <img class="newsCards" src="./img/latest-news/03-latest-news.jpg" alt="latest-news">
-                        <span class="cardsTexts newsDate text-secondary">May 07, 2022 By Admin</span>
-                        <h4 class="cardsTitles newsTitles">ARE YOU READY TO MAKE IT AWESOME</h4>
-                        <span class="cardsTexts">Design is our playground. While we create an awesome experience, we
-                            like having fun. No animals</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- banner loghi sponsor -->
-        <section id="loghiSponsor" class="d-flex justify-content-center text-center">
-            <div>
-                <img class="loghiIcons" src="./img/area-loghi/01-photo-love.png" alt="photo-love">
-            </div>
-            <div>
-                <img class="loghiIcons" src="./img/area-loghi/02-square-lens.png" alt="square-lens">
-            </div>
-            <div>
-                <img class="loghiIcons" src="./img/area-loghi/03-visual-films-photo.png" alt="visual-films-photo">
-            </div>
-            <div>
-                <img class="loghiIcons" src="./img/area-loghi/04-photo-studio.png" alt="photo-studio">
-            </div>
-            <div>
-                <img class="loghiIcons" src="./img/area-loghi/05-visual-films.png" alt="visual-films">
-            </div>
-        </section>
-
-        <!-- collaborate - want to work with us -->
-        <section class="my-5">
-            <div class="container-md">
-                <div class="row">
-                    <!-- intestazione sezione -->
-                    <div class="col-6">
-                        <h3 class="titlesSections">COLLABORATE</h3>
-                        <h2 class="fw-bold me-4 my-4">WANT TO WORK WITH US? LEAVE US A MESSAGE</h2>
-                        <p class="text-secondary">Duis sit amet congue ipsum. Nulla maximus My venenatis posuere.To
-                            The
-                            Mauris
-                            ut tempus Suspendisse
-                            porta tincidunt
-                            lectus non of me pellentesque. At A Sed blandit at diam sit amet Orci varius natoque
-                            penatibus
-                            et
-                            dis dis to parturient
-                            montes, My Car nascetur ridiculus Sed feugiat lacus in erat egestas, quis eleifend lacus
-                            imperdiet.
-                        </p>
-                    </div>
-                    <!-- form - contact us -->
-                    <div id="contactForm" class="col-6">
-                        <div>
-                            <div class="d-flex my-4 justify-content-between">
-                                <input class="contactInput" type="text" placeholder="Your Name">
-                                <input class="contactInput" type="email" placeholder="Your Email">
-                            </div>
-                            <div class="d-flex my-4 justify-content-between">
-                                <input class="contactInput" type="text" placeholder="Mobile Number">
-                                <input class="contactInput" type="text" placeholder="Your Pincode">
-                            </div>
-                            <textarea class="contactText" id="w3review" name="w3review" rows="8" cols="50"
-                                placeholder="Enter Your Message"></textarea>
-                            <button type="button" class="my-4 btnGeneral btnForm">SUBMIT NOW</button>
+                    <!-- search and social zone -->
+                    <div class="d-flex">
+                        <div id="searchbar">
+                            <img src="./img/header/lens-searchbar.svg" alt="search">
+                        </div>
+                        <span id="divisionLine" class="align-self-center"></span>
+                        <div id="socials">
+                            <img class="icons" v-for="utility in socialUtilities" :src="utility.logo"
+                                :alt="utility.nome">
                         </div>
                     </div>
                 </div>
-            </div>
-    </main>
+            </nav>
+        </header>
 
-    <footer>
-        <div class="container-md">
-            <div class="row py-5">
-                <div class="col-3">
-                    <h4 class="titlesSections footerTitles">CONTACT INFO</h4>
-                    <ul class="footerList">
-                        <li id="footerLocation">2/45 Tower Street, New York USA</li>
-                        <li id="footerCall">Call Us On 0800 840 1010</li>
-                        <li id="footerEmail">Demo@Example.Com</li>
-                    </ul>
+        <!-- SEZIONE CENTRALE DELLA PAGINA -->
+        <main class="px-1">
+            <!-- CAROUSEL -->
+            <!-- DA FARE: sistemazione colori e carosello funzionale -->
+            <section id="carousel" class="text-light d-flex align-items-center">
+                <span>
+                    <img class="iconsCarousel" src="./img/carousel/left-arrow.svg" alt="prev-arrow">
+                </span>
+                <div>
+                    <h3 class="titlesSections">CINEMA STUDIO</h3>
+                    <h2>ACTION AND INSPIRE PEOPLE</h2>
+                    <button type="button" class="btnGeneral">READ MORE</button>
                 </div>
-                <div class="col-3">
-                    <h4 class="titlesSections footerTitles">INFORMATION</h4>
-                    <ul class="footerList">
-                        <li>Product Support</li>
-                        <li>Checkout</li>
-                        <li>Report Abuse</li>
-                        <li>Redeem Voucher</li>
-                        <li>Order Status</li>
-                    </ul>
+                <span class="ms-auto">
+                    <img class="iconsCarousel" src="./img/carousel/right-arrow.svg" alt="next-arrow">
+                </span>
+            </section>
+
+            <!-- pelicula studio - this is what we do -->
+            <section class="my-5">
+                <!-- intestazione sezione -->
+                <div class="text-center">
+                    <h3 class="titlesSections">PELICULA STUDIO</h3>
+                    <h2 class="fw-bold">THIS IS WHAT WE DO</h2>
                 </div>
-                <div class="col-3">
-                    <h4 class="titlesSections footerTitles">USEFUL LINKS</h4>
-                    <ul class="footerList">
-                        <li>Policies & Rules</li>
-                        <li>Privacy Policy</li>
-                        <li>License Policy</li>
-                        <li>My Account</li>
-                        <li>Locality</li>
-                    </ul>
+                <!-- cards -->
+                <div class="container-md">
+                    <div class="row">
+                        <!-- DA FARE: generazione cards con vue.js -->
+                        <div class="col-4 my-3 text-center">
+                            <img class="cardsIcons" src="./img/pelicula-studio/01-cinepresa.svg" alt="cinepresa">
+                            <h4 class="cardsTitles">ARRAY OF EQUIPMENT</h4>
+                            <span class="cardsTexts">Lorem ipsum dolor amet, consectetur adipiscing. Pellenter ultricies
+                                justo tellus.</span>
+                        </div>
+                        <div class="col-4 my-3 text-center">
+                            <img class="cardsIcons" src="./img/pelicula-studio/02-3D-glasses.svg" alt="3D-glasses">
+                            <h4 class="cardsTitles">NEW TECHNOLOGIES</h4>
+                            <span class="cardsTexts">Lorem ipsum dolor amet, consectetur adipiscing. Pellenter ultricies
+                                justo tellus.</span>
+                        </div>
+                        <div class="col-4 my-3 text-center">
+                            <img class="cardsIcons" src="./img/pelicula-studio/03-masks.svg" alt="masks">
+                            <h4 class="cardsTitles">VERSATILE ACTORS</h4>
+                            <span class="cardsTexts">Lorem ipsum dolor amet, consectetur adipiscing. Pellenter ultricies
+                                justo tellus.</span>
+                        </div>
+                        <div class="col-4 my-3 text-center">
+                            <img class="cardsIcons" src="./img/pelicula-studio/04-sedia-director.svg"
+                                alt="sedia-director">
+                            <h4 class="cardsTitles">TOP DIRECTORS</h4>
+                            <span class="cardsTexts">Lorem ipsum dolor amet, consectetur adipiscing. Pellenter ultricies
+                                justo tellus.</span>
+                        </div>
+                        <div class="col-4 my-3 text-center">
+                            <img class="cardsIcons" src="./img/pelicula-studio/05-ciak.svg" alt="ciak">
+                            <h4 class="cardsTitles">MINUTE EDITING</h4>
+                            <span class="cardsTexts">Lorem ipsum dolor amet, consectetur adipiscing. Pellenter ultricies
+                                justo tellus.</span>
+                        </div>
+                        <div class="col-4 my-3 text-center">
+                            <img class="cardsIcons" src="./img/pelicula-studio/06-pellicola.svg" alt="pellicola">
+                            <h4 class="cardsTitles">VERSATILE ACTORS</h4>
+                            <span class="cardsTexts">Lorem ipsum dolor amet, consectetur adipiscing. Pellenter ultricies
+                                justo tellus.</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-3">
-                    <h4 class="titlesSections footerTitles">NEWSLETTER</h4>
-                    <span class="d-block footerList">Subscribe To Receive Inspiration, Ideas & News In Your
-                        Inbox.</span>
-                    <input type="text" placeholder="Enter Your Email" class="contactInput blackInput">
-                    <button type="button" class="my-3 btnGeneral">SUBSCRIBE</button>
+            </section>
+
+            <!-- about us - high quality cinematics -->
+            <section id="aboutUs" class="d-flex justify-content-end align-items-center p-5">
+                <div>
+                    <h3 class="titlesSections">ABOUT US</h3>
+                    <h2 class="fw-bold">HIGH QUALITY CINEMATICS</h2>
+                    <p class="my-4">Orci varius penatibus et magnis dis parturient In the montes, nascetur ridiculus
+                        mus.
+                        Nulla
+                        A
+                        nisi ut mi
+                        efficitur
+                        hendrerit. nunc urna. quisque a partr hendrerit purus erat, nec dapibus sem sed. phasellus sed
+                        eli
+                        molestie, porttitor
+                        ligula of the egestas, mattis augue. quisque et rhoncus justo. suspendisse luctus pharetra eleme
+                        tcondimentum.
+                    </p>
+                    <button type="button" class="btnGeneral">READ MORE</button>
+                </div>
+            </section>
+
+            <!-- your watchlist - best hits movies -->
+            <section class="my-5">
+                <!-- intestazione sezione -->
+                <div class="text-center mb-4">
+                    <h3 class="titlesSections">YOUR WATCHLIST</h3>
+                    <h2 class="fw-bold">BEST HITS MOVIES</h2>
+                </div>
+                <!-- cards -->
+                <div class="container-md">
+                    <div class="row g-4">
+                        <!-- DA FARE: generazione cards con vue.js -->
+                        <div class="col-4 my-3 text-center">
+                            <img class="cardsBigIcons" src="./img/your-watchlist/01-your-watchlist.jpg"
+                                alt="your-watchlist">
+                            <h4 class="cardsTitles">SEVENTEENTH SUMMER</h4>
+                            <span class="cardsTexts">Commercial, Music Video</span>
+                        </div>
+                        <div class="col-4 my-3 text-center">
+                            <img class="cardsBigIcons" src="./img/your-watchlist/02-your-watchlist.jpg"
+                                alt="your-watchlist">
+                            <h4 class="cardsTitles">A MESSAGE TO SPACE</h4>
+                            <span class="cardsTexts">Short Film</span>
+                        </div>
+                        <div class="col-4 my-3 text-center">
+                            <img class="cardsBigIcons" src="./img/your-watchlist/03-your-watchlist.jpg"
+                                alt="your-watchlist">
+                            <h4 class="cardsTitles">THE MOST BEAUTIFUL THING</h4>
+                            <span class="cardsTexts">Music Video</span>
+                        </div>
+                        <div class="col-4 my-3 text-center">
+                            <img class="cardsBigIcons" src="./img/your-watchlist/04-your-watchlist.jpg"
+                                alt="your-watchlist">
+                            <h4 class="cardsTitles">PERMISSION TO SPEAK</h4>
+                            <span class="cardsTexts">Documentary</span>
+                        </div>
+                        <div class="col-4 my-3 text-center">
+                            <img class="cardsBigIcons" src="./img/your-watchlist/05-your-watchlist.jpg"
+                                alt="your-watchlist">
+                            <h4 class="cardsTitles">EXPLORE OUR SPACE</h4>
+                            <span class="cardsTexts">Film Noir</span>
+                        </div>
+                        <div class="col-4 my-3 text-center">
+                            <img class="cardsBigIcons" src="./img/your-watchlist/06-your-watchlist.jpg"
+                                alt="your-watchlist">
+                            <h4 class="cardsTitles">FILM PRODUCTION</h4>
+                            <span class="cardsTexts">Blaxploitation</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- banner satisfied clients -->
+            <section id="satisfiedClients" class="d-flex justify-content-center text-center">
+                <div>
+                    <h3 class="fw-bold">158</h3>
+                    <h2 class="titlesSections">SATISFIED CLIENTS</h2>
+                </div>
+                <div>
+                    <h3 class="fw-bold">3+</h3>
+                    <h2 class="titlesSections">OUR PROJECTS</h2>
+                </div>
+                <div>
+                    <h3 class="fw-bold">1,906</h3>
+                    <h2 class="titlesSections">CUP OF COFFEE</h2>
+                </div>
+                <div>
+                    <h3 class="fw-bold">2</h3>
+                    <h2 class="titlesSections">AWARDS</h2>
+                </div>
+            </section>
+
+            <!-- the pericuros - meet the team -->
+            <section class="my-5">
+                <!-- intestazione sezione -->
+                <div class="text-center mb-4">
+                    <h3 class="titlesSections">THE PERICUROS</h3>
+                    <h2 class="fw-bold">MEET THE TEAM</h2>
+                </div>
+                <!-- cards -->
+                <div class="container-md">
+                    <div class="row justify-content-center g-4">
+                        <!-- DA FARE: generazione cards con vue.js -->
+                        <div class="col-2 text-center">
+                            <img class="cardsTeam" src="./img/the-pericuros/Team-01.jpg" alt="team">
+                            <h4 class="cardsTitles">FABRICIO GUERRA</h4>
+                            <span class="cardsTexts">Main Director</span>
+                        </div>
+                        <div class="col-2 text-center">
+                            <img class="cardsTeam" src="./img/the-pericuros/Team-02.jpg" alt="team">
+                            <h4 class="cardsTitles">UMBERTO PAGODA</h4>
+                            <span class="cardsTexts">Main Writer</span>
+                        </div>
+                        <div class="col-2 text-center">
+                            <img class="cardsTeam" src="./img/the-pericuros/Team-03.jpg" alt="team">
+                            <h4 class="cardsTitles">GLORIA RICCASSO</h4>
+                            <span class="cardsTexts">Main Producer</span>
+                        </div>
+                        <div class="col-2 text-center">
+                            <img class="cardsTeam" src="./img/the-pericuros/Team-04.jpg" alt="team">
+                            <h4 class="cardsTitles">LIO NAPOIN</h4>
+                            <span class="cardsTexts">Cameraman</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- area citazioni -->
+            <section id="areaCitazioni" class="d-flex justify-content-center align-items-center">
+                <div>
+                    <div class="text-center">
+                        <span>
+                            <img class="citIcons" src="./img/area-citazioni/virgolette.svg" alt="virgolette">
+                        </span>
+                        <p>Curabitur bibendum ex ut sapien blandit viverra. Nunc lobortis mi dui, id Etiam tempor sit
+                            amet
+                            metus
+                            in bibendum. Nunc
+                            eros risus, pellentesque a augue Pellentesque fringilla eget mi eu mollis. Mauris commodo.
+                        </p>
+                    </div>
+                    <span class="d-flex justify-content-center align-items-center">
+                        <img class="rounded-circle" src="./img/area-citazioni/01.jpg" alt="face-cit">
+                        <span class="citUser">
+                            <h4 class="citTitles">JOHN DOE</h4>
+                            <span class="citRoles">Designer</span>
+                        </span>
+                    </span>
+                    <div class="d-flex justify-content-center">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- latest news - articles updated daily -->
+            <section class="my-5">
+                <!-- intestazione sezione -->
+                <div class="text-center mb-4">
+                    <h3 class="titlesSections">LATEST NEWS</h3>
+                    <h2 class="fw-bold">ARTICLES UPDATED DAILY</h2>
+                </div>
+                <div class="container-md">
+                    <div class="row g-4">
+                        <!-- DA FARE: generazione cards con vue.js -->
+                        <div class="col-4 my-3">
+                            <img class="newsCards" src="./img/latest-news/01-latest-news.jpg" alt="latest-news">
+                            <span class="cardsTexts newsDate text-secondary">November 06, 2021 By Admin</span>
+                            <h4 class="cardsTitles newsTitles">RECAP YOUR LATEST COMPANY EVENT</h4>
+                            <span class="cardsTexts">Suspendisse dictum dictum tempor. Ut non faucibus arcu, id
+                                elementum
+                                est. Suspendisse sed</span>
+                        </div>
+                        <div class="col-4 my-3">
+                            <img class="newsCards" src="./img/latest-news/02-latest-news.jpg" alt="latest-news">
+                            <span class="cardsTexts newsDate text-secondary">May 27, 2022 By Admin</span>
+                            <h4 class="cardsTitles newsTitles">HOW TO EDIT A FILM SCORE TO SERVE</h4>
+                            <span class="cardsTexts">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                eiusmod tempor incididunt ut</span>
+                        </div>
+                        <div class="col-4 my-3">
+                            <img class="newsCards" src="./img/latest-news/03-latest-news.jpg" alt="latest-news">
+                            <span class="cardsTexts newsDate text-secondary">May 07, 2022 By Admin</span>
+                            <h4 class="cardsTitles newsTitles">ARE YOU READY TO MAKE IT AWESOME</h4>
+                            <span class="cardsTexts">Design is our playground. While we create an awesome experience, we
+                                like having fun. No animals</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- banner loghi sponsor -->
+            <section id="loghiSponsor" class="d-flex justify-content-center text-center">
+                <div>
+                    <img class="loghiIcons" src="./img/area-loghi/01-photo-love.png" alt="photo-love">
+                </div>
+                <div>
+                    <img class="loghiIcons" src="./img/area-loghi/02-square-lens.png" alt="square-lens">
+                </div>
+                <div>
+                    <img class="loghiIcons" src="./img/area-loghi/03-visual-films-photo.png" alt="visual-films-photo">
+                </div>
+                <div>
+                    <img class="loghiIcons" src="./img/area-loghi/04-photo-studio.png" alt="photo-studio">
+                </div>
+                <div>
+                    <img class="loghiIcons" src="./img/area-loghi/05-visual-films.png" alt="visual-films">
+                </div>
+            </section>
+
+            <!-- collaborate - want to work with us -->
+            <section class="my-5">
+                <div class="container-md">
+                    <div class="row">
+                        <!-- intestazione sezione -->
+                        <div class="col-6">
+                            <h3 class="titlesSections">COLLABORATE</h3>
+                            <h2 class="fw-bold me-4 my-4">WANT TO WORK WITH US? LEAVE US A MESSAGE</h2>
+                            <p class="text-secondary">Duis sit amet congue ipsum. Nulla maximus My venenatis posuere.To
+                                The
+                                Mauris
+                                ut tempus Suspendisse
+                                porta tincidunt
+                                lectus non of me pellentesque. At A Sed blandit at diam sit amet Orci varius natoque
+                                penatibus
+                                et
+                                dis dis to parturient
+                                montes, My Car nascetur ridiculus Sed feugiat lacus in erat egestas, quis eleifend lacus
+                                imperdiet.
+                            </p>
+                        </div>
+                        <!-- form - contact us -->
+                        <div id="contactForm" class="col-6">
+                            <div>
+                                <div class="d-flex my-4 justify-content-between">
+                                    <input class="contactInput" type="text" placeholder="Your Name">
+                                    <input class="contactInput" type="email" placeholder="Your Email">
+                                </div>
+                                <div class="d-flex my-4 justify-content-between">
+                                    <input class="contactInput" type="text" placeholder="Mobile Number">
+                                    <input class="contactInput" type="text" placeholder="Your Pincode">
+                                </div>
+                                <textarea class="contactText" id="w3review" name="w3review" rows="8" cols="50"
+                                    placeholder="Enter Your Message"></textarea>
+                                <button type="button" class="my-4 btnGeneral btnForm">SUBMIT NOW</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </main>
+
+        <footer>
+            <div id="utilitiesLinks">
+                <div class="container-md">
+                    <div class="row py-5">
+                        <div class="col-3">
+                            <h4 class="titlesSections footerTitles">CONTACT INFO</h4>
+                            <ul class="footerList">
+                                <li id="footerLocation">2/45 Tower Street, New York USA</li>
+                                <li id="footerCall">Call Us On 0800 840 1010</li>
+                                <li id="footerEmail">Demo@Example.Com</li>
+                            </ul>
+                        </div>
+
+                        <!-- PARTE DEL FOOTER CENTRALE, GENERATA CON VUE.JS -->
+
+                        <div v-for="list in utilitiesLists" class="col-3">
+                            <h4 class="titlesSections footerTitles">{{list.title}}</h4>
+                            <ul class="footerList">
+                                <li v-for="link in list.links">{{link}}</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-3">
+                            <h4 class="titlesSections footerTitles">NEWSLETTER</h4>
+                            <span class="footerList">Subscribe To Receive Inspiration, Ideas & News In Your
+                                Inbox.</span>
+                            <input type="text" placeholder="Enter Your Email" class="contactInput blackInput">
+                            <button type="button" class="my-3 btnGeneral">SUBSCRIBE</button>
+                        </div>
+                    </div>
+                    <div class="text-center text-light">
+                        <hr class="m-0">
+                        <span class="d-block p-3 text-secondary fs-6">&copy 2023 All Rights Reserved. Developed By Rocca
+                            Francesco</span>
+                    </div>
                 </div>
             </div>
-            <div class="text-center text-light">
-                <hr class="m-0">
-                <span class="d-block p-3 text-secondary fs-6">&copy 2023 All Rights Reserved. Developed By Rocca
-                    Francesco</span>
-            </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
 </body>
 
 </html>
