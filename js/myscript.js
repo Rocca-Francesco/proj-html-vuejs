@@ -20,6 +20,8 @@ createApp({
         {
           titolo: "PAGES",
           dropdownMenu: true,
+          // showDropdown
+          showDropDownMenu: false
         },
         {
           titolo: "ABOUT",
@@ -35,7 +37,9 @@ createApp({
         },
         {
           titolo: "SHOP",
-          dropdownMenu: true
+          dropdownMenu: true,
+          // showDropdown
+          showDropDownMenu: false
         }
       ],
 
@@ -58,6 +62,9 @@ createApp({
         }
       ],
 
+
+
+      // FOOTER
       utilitiesLists: [
         {
           title: "INFORMATION",
@@ -85,7 +92,7 @@ createApp({
 
   methods: {
     showDropDown(index) {
-      this.navbarLists[index].dropdownMenu = !this.navbarLists[index].dropdownMenu;
+      this.navbarLists[index].showDropDownMenu = !this.navbarLists[index].showDropDownMenu
     }
   }
 }).mount('#app')

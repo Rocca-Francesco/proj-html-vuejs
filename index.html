@@ -52,43 +52,13 @@
                                     @click="showDropDown(index)" href="#">
                                     {{list.titolo}}
                                 </a>
-                                <ul v-show="list.dropdownMenu" class="navDownMenu">
+                                <ul v-if="list.dropdownMenu" v-show="list.showDropDownMenu" class="navDownMenu">
                                     <li class="navDownItem">SERVICES</li>
                                     <li class="navDownItem long">OUR WORK FLOW</li>
                                     <li class="navDownItem">VIDEO THUMBNAIL TYPE</li>
                                 </ul>
                             </li>
-
-
-                            <!-- <li class="nav-item">
-                                <a class="nav-link active" href="#">HOME</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#">BLOG</a>
-                            </li>
-                            
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#">ABOUT</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#">CONTACTS</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#">GALLERY</a>
-                            </li>
-                            <li class="nav-item active">
-                                <a class="nav-link active" href="#" role="button">
-                                    SHOP
-                                    <img class="downArrow" src="./img/header/arrow-down.svg" alt="downArrow">
-                                </a>
-                                <ul class="navDownMenu">
-                                    <li class="navDownItem">SERVICES</li>
-                                    <li class="navDownItem long">OUR WORK FLOW</li>
-                                    <li class="navDownItem">VIDEO THUMBNAIL TYPE</li>
-                                </ul>
-                            </li> -->
                         </ul>
-
                     </div>
                     <!-- search and social zone -->
                     <div class="d-flex">
