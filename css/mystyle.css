@@ -21,10 +21,15 @@
   margin-right: 8rem;
 }
 
+#searchbar {
+  cursor: pointer;
+}
+
 .icons {
   width: 1.2rem;
   height: 1.2rem;
   margin: 0 0.7rem;
+  cursor: pointer;
 }
 
 #divisionLine {
@@ -64,6 +69,7 @@
   padding: 0.4rem;
   font-size: 0.8rem;
   width: 11rem;
+  cursor: pointer;
 }
 
 .navDownItem.long {
@@ -280,6 +286,7 @@ footer {
 .footerList>li:hover {
   color: #F2F2F2;
   fill: #F2F2F2;
+  cursor: pointer;
 }
 
 .contactInput.blackInput {
