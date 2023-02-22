@@ -47,15 +47,20 @@
                     <div class="justify-content-center" id="navbarSupportedContent">
                         <!-- zona link centrale -->
                         <ul class="navbar-nav mb-2 mb-lg-0 fw-semibold align-items-center">
+                            <!-- funzione per creare ogni link centrale nella navbar -->
                             <li v-for="(list, index) in navbarLists" class="nav-item">
+                                <!-- se ho un menu dropdown, aggiungo la freccia per far capire all'utente l'esistenza del menu nascosto -->
                                 <a class="nav-link active" :class="(list.dropdownMenu) ? 'downArrow' : ''"
                                     @click="showDropDown(index)" href="#">
                                     {{list.titolo}}
                                 </a>
-                                <ul v-if="list.dropdownMenu" v-show="list.showDropDownMenu" class="navDownMenu">
-                                    <li class="navDownItem">SERVICES</li>
-                                    <li class="navDownItem long">OUR WORK FLOW</li>
-                                    <li class="navDownItem">VIDEO THUMBNAIL TYPE</li>
+                                <!-- creo il menu nascosto solo in caso di necessita -->
+                                <ul v-if="list.dropdownMenu" :data-index="index" v-show="list.showDropDownMenu"
+                                    class="navDownMenu">
+                                    <!-- a ogni link associo l'evento di hover -->
+                                    <li v-for="item in list.dropdownItems" @mouseover="timeToGrow(item)"
+                                        @mouseleave="timeToReduce(item)" class="navDownItem"
+                                        :class="(item.hovered) ? 'long' : ''"> {{item.nome}} </li>
                                 </ul>
                             </li>
                         </ul>
@@ -67,6 +72,7 @@
                         </div>
                         <span id="divisionLine" class="align-self-center"></span>
                         <div id="socials">
+                            <!-- funzione per creare i link ai socials -->
                             <img class="icons" v-for="utility in socialUtilities" :src="utility.logo"
                                 :alt="utility.nome">
                         </div>
@@ -80,14 +86,17 @@
             <!-- CAROUSEL -->
             <!-- DA FARE: sistemazione colori e carosello funzionale -->
             <section id="carousel" class="text-light d-flex align-items-center">
+                <!-- freccia prev -->
                 <span>
                     <img class="iconsCarousel" src="./img/carousel/left-arrow.svg" alt="prev-arrow">
                 </span>
+                <!-- zona centrale -->
                 <div>
                     <h3 class="titlesSections">CINEMA STUDIO</h3>
                     <h2>ACTION AND INSPIRE PEOPLE</h2>
                     <button type="button" class="btnGeneral">READ MORE</button>
                 </div>
+                <!-- freccia next -->
                 <span class="ms-auto">
                     <img class="iconsCarousel" src="./img/carousel/right-arrow.svg" alt="next-arrow">
                 </span>

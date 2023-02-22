@@ -3,11 +3,13 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
+      // NAVBAR
       attivita: {
         nome: "Cinemato",
         logo: "./img/header/logo.svg"
       },
 
+      // dati link centrali navbar
       navbarLists: [
         {
           titolo: "HOME",
@@ -21,7 +23,25 @@ createApp({
           titolo: "PAGES",
           dropdownMenu: true,
           // showDropdown
-          showDropDownMenu: false
+          showDropDownMenu: false,
+          // dato solo in caso di lista dropdown
+          dropdownItems: [
+            {
+              nome: "SERVICES",
+              // dato legato al passaggio del mouse per l'hover
+              hovered: false
+            },
+            {
+              nome: "OUR WORK FLOW",
+              // dato legato al passaggio del mouse per l'hover
+              hovered: false
+            },
+            {
+              nome: "VIDEO THUMBNAIL TYPE",
+              // dato legato al passaggio del mouse per l'hover
+              hovered: false
+            }
+          ]
         },
         {
           titolo: "ABOUT",
@@ -39,10 +59,29 @@ createApp({
           titolo: "SHOP",
           dropdownMenu: true,
           // showDropdown
-          showDropDownMenu: false
+          showDropDownMenu: false,
+          // dato solo in caso di lista dropdown
+          dropdownItems: [
+            {
+              nome: "SERVICES",
+              // dato legato al passaggio del mouse per l'hover
+              hovered: false
+            },
+            {
+              nome: "OUR WORK FLOW",
+              // dato legato al passaggio del mouse per l'hover
+              hovered: false
+            },
+            {
+              nome: "VIDEO THUMBNAIL TYPE",
+              // dato legato al passaggio del mouse per l'hover
+              hovered: false
+            }
+          ]
         }
       ],
 
+      // dati per le icone social nella navbar
       socialUtilities: [
         {
           nome: "facebook",
@@ -91,8 +130,19 @@ createApp({
   },
 
   methods: {
+    // funzione per mostrare o meno il menu scelto nella navbar
     showDropDown(index) {
       this.navbarLists[index].showDropDownMenu = !this.navbarLists[index].showDropDownMenu
+    },
+
+    // 1. funzione per evidenziare il link scelto nella navbar
+    timeToGrow(itemHover) {
+      itemHover.hovered = true;
+    },
+
+    // 2. funzione per rimuovere l'evidenza del link scelto nella navbar
+    timeToReduce(itemHover) {
+      itemHover.hovered = false;
     }
   }
 }).mount('#app')

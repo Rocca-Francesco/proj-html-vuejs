@@ -121,6 +121,7 @@
   background-image: url(../img/About-Us.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
   height: 26rem;
 }
 
