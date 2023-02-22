@@ -37,6 +37,25 @@ createApp({
           titolo: "SHOP",
           dropdownMenu: true
         }
+      ],
+
+      socialUtilities: [
+        {
+          nome: "facebook",
+          logo: "./img/header/logo-facebook.svg"
+        },
+        {
+          nome: "twitter",
+          logo: "./img/header/logo-twitter.svg"
+        },
+        {
+          nome: "youtube",
+          logo: "./img/header/logo-youtube.svg"
+        },
+        {
+          nome: "instagram",
+          logo: "./img/header/logo-instagram.svg"
+        }
       ]
     }
   }

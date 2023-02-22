@@ -101,10 +101,7 @@
                     </div>
                     <span id="divisionLine" class="align-self-center"></span>
                     <div id="socials">
-                        <img class="icons" src="./img/header/logo-facebook.svg" alt="facebook">
-                        <img class="icons" src="./img/header/logo-twitter.svg" alt="twitter">
-                        <img class="icons" src="./img/header/logo-youtube.svg" alt="youtube">
-                        <img class="icons" src="./img/header/logo-instagram.svg" alt="instagram">
+                        <img class="icons" v-for="utility in socialUtilities" :src="utility.logo" :alt="utility.nome">
                     </div>
                 </div>
             </div>
