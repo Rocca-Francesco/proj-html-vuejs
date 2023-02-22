@@ -29,7 +29,8 @@
     <!-- my css -->
     <link rel="stylesheet" href="./css/mystyle.css">
     <!-- my js -->
-    <script type="text/javascript" src="./js/myscript.js" defer></script>
+    <script type="text/javascript" src="./js/myscriptNavbar.js" defer></script>
+    <script type="text/javascript" src="./js/myscriptFooter.js" defer></script>
 </head>
 
 <body>
@@ -39,14 +40,21 @@
             <div class="container-fluid">
                 <!-- zona logo -->
                 <a id="logoIcon" href="#">
-                    <img src="./img/header/logo.svg" alt="Logo" width="140" height="30"
+                    <img :src="attivita.logo" alt="Logo" width="140" height="30"
                         class="d-inline-block align-text-top mb-2">
                 </a>
 
                 <div class="justify-content-center" id="navbarSupportedContent">
                     <!-- zona link centrale -->
                     <ul class="navbar-nav mb-2 mb-lg-0 fw-semibold align-items-center">
-                        <li class="nav-item">
+                        <li v-for="list in navbarLists" class="nav-item">
+                            <a class="nav-link active" href="#">
+                                {{list.titolo}}
+
+                            </a>
+                        </li>
+
+                        <!-- <li class="nav-item">
                             <a class="nav-link active" href="#">HOME</a>
                         </li>
                         <li class="nav-item">
@@ -82,7 +90,7 @@
                                 <li class="navDownItem long">OUR WORK FLOW</li>
                                 <li class="navDownItem">VIDEO THUMBNAIL TYPE</li>
                             </ul>
-                        </li>
+                        </li> -->
                     </ul>
 
                 </div>
