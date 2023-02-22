@@ -102,7 +102,7 @@
                 </span>
             </section>
 
-            <!-- pelicula studio - this is what we do -->
+            <!-- PELICULA STUDIO - this is what we do -->
             <section class="my-5">
                 <!-- intestazione sezione -->
                 <div class="text-center">
@@ -112,70 +112,31 @@
                 <!-- cards -->
                 <div class="container-md">
                     <div class="row">
-                        <!-- DA FARE: generazione cards con vue.js -->
-                        <div class="col-4 my-3 text-center">
-                            <img class="cardsIcons" src="./img/pelicula-studio/01-cinepresa.svg" alt="cinepresa">
-                            <h4 class="cardsTitles">ARRAY OF EQUIPMENT</h4>
-                            <span class="cardsTexts">Lorem ipsum dolor amet, consectetur adipiscing. Pellenter ultricies
-                                justo tellus.</span>
-                        </div>
-                        <div class="col-4 my-3 text-center">
-                            <img class="cardsIcons" src="./img/pelicula-studio/02-3D-glasses.svg" alt="3D-glasses">
-                            <h4 class="cardsTitles">NEW TECHNOLOGIES</h4>
-                            <span class="cardsTexts">Lorem ipsum dolor amet, consectetur adipiscing. Pellenter ultricies
-                                justo tellus.</span>
-                        </div>
-                        <div class="col-4 my-3 text-center">
-                            <img class="cardsIcons" src="./img/pelicula-studio/03-masks.svg" alt="masks">
-                            <h4 class="cardsTitles">VERSATILE ACTORS</h4>
-                            <span class="cardsTexts">Lorem ipsum dolor amet, consectetur adipiscing. Pellenter ultricies
-                                justo tellus.</span>
-                        </div>
-                        <div class="col-4 my-3 text-center">
-                            <img class="cardsIcons" src="./img/pelicula-studio/04-sedia-director.svg"
-                                alt="sedia-director">
-                            <h4 class="cardsTitles">TOP DIRECTORS</h4>
-                            <span class="cardsTexts">Lorem ipsum dolor amet, consectetur adipiscing. Pellenter ultricies
-                                justo tellus.</span>
-                        </div>
-                        <div class="col-4 my-3 text-center">
-                            <img class="cardsIcons" src="./img/pelicula-studio/05-ciak.svg" alt="ciak">
-                            <h4 class="cardsTitles">MINUTE EDITING</h4>
-                            <span class="cardsTexts">Lorem ipsum dolor amet, consectetur adipiscing. Pellenter ultricies
-                                justo tellus.</span>
-                        </div>
-                        <div class="col-4 my-3 text-center">
-                            <img class="cardsIcons" src="./img/pelicula-studio/06-pellicola.svg" alt="pellicola">
-                            <h4 class="cardsTitles">VERSATILE ACTORS</h4>
-                            <span class="cardsTexts">Lorem ipsum dolor amet, consectetur adipiscing. Pellenter ultricies
-                                justo tellus.</span>
+                        <div v-for="ability in abilities" class="col-4 my-3 text-center">
+                            <img class="cardsIcons" :src="ability.image" :alt="ability.type">
+                            <h4 class="cardsTitles">{{ability.title}}</h4>
+                            <span class="cardsTexts">{{ability.text}}</span>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- about us - high quality cinematics -->
+            <!-- ABOUT US - high quality cinematics -->
             <section id="aboutUs" class="d-flex justify-content-end align-items-center p-5">
                 <div>
                     <h3 class="titlesSections">ABOUT US</h3>
                     <h2 class="fw-bold">HIGH QUALITY CINEMATICS</h2>
-                    <p class="my-4">Orci varius penatibus et magnis dis parturient In the montes, nascetur ridiculus
-                        mus.
-                        Nulla
-                        A
-                        nisi ut mi
-                        efficitur
-                        hendrerit. nunc urna. quisque a partr hendrerit purus erat, nec dapibus sem sed. phasellus sed
-                        eli
-                        molestie, porttitor
-                        ligula of the egestas, mattis augue. quisque et rhoncus justo. suspendisse luctus pharetra eleme
-                        tcondimentum.
+                    <p class="my-4">
+                        Orci varius penatibus et magnis dis parturient In the montes, nascetur ridiculus mus. Nulla A
+                        nisi ut mi efficitur hendrerit. nunc urna. quisque a partr hendrerit purus erat, nec dapibus sem
+                        sed. phasellus sed eli molestie, porttitor ligula of the egestas, mattis augue. quisque et
+                        rhoncus justo. suspendisse luctus pharetra eleme tcondimentum.
                     </p>
                     <button type="button" class="btnGeneral">READ MORE</button>
                 </div>
             </section>
 
-            <!-- your watchlist - best hits movies -->
+            <!-- YOUR WATCHLIST - best hits movies -->
             <section class="my-5">
                 <!-- intestazione sezione -->
                 <div class="text-center mb-4">
@@ -185,48 +146,16 @@
                 <!-- cards -->
                 <div class="container-md">
                     <div class="row g-4">
-                        <!-- DA FARE: generazione cards con vue.js -->
-                        <div class="col-4 my-3 text-center">
-                            <img class="cardsBigIcons" src="./img/your-watchlist/01-your-watchlist.jpg"
-                                alt="your-watchlist">
-                            <h4 class="cardsTitles">SEVENTEENTH SUMMER</h4>
-                            <span class="cardsTexts">Commercial, Music Video</span>
-                        </div>
-                        <div class="col-4 my-3 text-center">
-                            <img class="cardsBigIcons" src="./img/your-watchlist/02-your-watchlist.jpg"
-                                alt="your-watchlist">
-                            <h4 class="cardsTitles">A MESSAGE TO SPACE</h4>
-                            <span class="cardsTexts">Short Film</span>
-                        </div>
-                        <div class="col-4 my-3 text-center">
-                            <img class="cardsBigIcons" src="./img/your-watchlist/03-your-watchlist.jpg"
-                                alt="your-watchlist">
-                            <h4 class="cardsTitles">THE MOST BEAUTIFUL THING</h4>
-                            <span class="cardsTexts">Music Video</span>
-                        </div>
-                        <div class="col-4 my-3 text-center">
-                            <img class="cardsBigIcons" src="./img/your-watchlist/04-your-watchlist.jpg"
-                                alt="your-watchlist">
-                            <h4 class="cardsTitles">PERMISSION TO SPEAK</h4>
-                            <span class="cardsTexts">Documentary</span>
-                        </div>
-                        <div class="col-4 my-3 text-center">
-                            <img class="cardsBigIcons" src="./img/your-watchlist/05-your-watchlist.jpg"
-                                alt="your-watchlist">
-                            <h4 class="cardsTitles">EXPLORE OUR SPACE</h4>
-                            <span class="cardsTexts">Film Noir</span>
-                        </div>
-                        <div class="col-4 my-3 text-center">
-                            <img class="cardsBigIcons" src="./img/your-watchlist/06-your-watchlist.jpg"
-                                alt="your-watchlist">
-                            <h4 class="cardsTitles">FILM PRODUCTION</h4>
-                            <span class="cardsTexts">Blaxploitation</span>
+                        <div v-for="movie in movies" class="col-4 my-3 text-center">
+                            <img class="cardsBigIcons" :src="movie.image" alt="your-watchlist">
+                            <h4 class="cardsTitles">{{movie.title}}</h4>
+                            <span class="cardsTexts">{{movie.type}}</span>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- banner satisfied clients -->
+            <!-- BANNER SATISFIED CLIENTS -->
             <section id="satisfiedClients" class="d-flex justify-content-center text-center">
                 <div>
                     <h3 class="fw-bold">158</h3>
@@ -246,7 +175,7 @@
                 </div>
             </section>
 
-            <!-- the pericuros - meet the team -->
+            <!-- THE PERICUROS - meet the team -->
             <section class="my-5">
                 <!-- intestazione sezione -->
                 <div class="text-center mb-4">
@@ -256,32 +185,16 @@
                 <!-- cards -->
                 <div class="container-md">
                     <div class="row justify-content-center g-4">
-                        <!-- DA FARE: generazione cards con vue.js -->
-                        <div class="col-2 text-center">
-                            <img class="cardsTeam" src="./img/the-pericuros/Team-01.jpg" alt="team">
-                            <h4 class="cardsTitles">FABRICIO GUERRA</h4>
-                            <span class="cardsTexts">Main Director</span>
-                        </div>
-                        <div class="col-2 text-center">
-                            <img class="cardsTeam" src="./img/the-pericuros/Team-02.jpg" alt="team">
-                            <h4 class="cardsTitles">UMBERTO PAGODA</h4>
-                            <span class="cardsTexts">Main Writer</span>
-                        </div>
-                        <div class="col-2 text-center">
-                            <img class="cardsTeam" src="./img/the-pericuros/Team-03.jpg" alt="team">
-                            <h4 class="cardsTitles">GLORIA RICCASSO</h4>
-                            <span class="cardsTexts">Main Producer</span>
-                        </div>
-                        <div class="col-2 text-center">
-                            <img class="cardsTeam" src="./img/the-pericuros/Team-04.jpg" alt="team">
-                            <h4 class="cardsTitles">LIO NAPOIN</h4>
-                            <span class="cardsTexts">Cameraman</span>
+                        <div v-for="member in team" class="col-2 text-center">
+                            <img class="cardsTeam" :src="member.image" alt="team">
+                            <h4 class="cardsTitles">{{member.manName}}</h4>
+                            <span class="cardsTexts">{{member.role}}</span>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- area citazioni -->
+            <!-- AREA CITAZIONI -->
             <section id="areaCitazioni" class="d-flex justify-content-center align-items-center">
                 <div>
                     <div class="text-center">
@@ -310,7 +223,7 @@
                 </div>
             </section>
 
-            <!-- latest news - articles updated daily -->
+            <!-- LATEST NEWS - articles updated daily -->
             <section class="my-5">
                 <!-- intestazione sezione -->
                 <div class="text-center mb-4">
@@ -319,49 +232,20 @@
                 </div>
                 <div class="container-md">
                     <div class="row g-4">
-                        <!-- DA FARE: generazione cards con vue.js -->
-                        <div class="col-4 my-3">
-                            <img class="newsCards" src="./img/latest-news/01-latest-news.jpg" alt="latest-news">
-                            <span class="cardsTexts newsDate text-secondary">November 06, 2021 By Admin</span>
-                            <h4 class="cardsTitles newsTitles">RECAP YOUR LATEST COMPANY EVENT</h4>
-                            <span class="cardsTexts">Suspendisse dictum dictum tempor. Ut non faucibus arcu, id
-                                elementum
-                                est. Suspendisse sed</span>
-                        </div>
-                        <div class="col-4 my-3">
-                            <img class="newsCards" src="./img/latest-news/02-latest-news.jpg" alt="latest-news">
-                            <span class="cardsTexts newsDate text-secondary">May 27, 2022 By Admin</span>
-                            <h4 class="cardsTitles newsTitles">HOW TO EDIT A FILM SCORE TO SERVE</h4>
-                            <span class="cardsTexts">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                                eiusmod tempor incididunt ut</span>
-                        </div>
-                        <div class="col-4 my-3">
-                            <img class="newsCards" src="./img/latest-news/03-latest-news.jpg" alt="latest-news">
-                            <span class="cardsTexts newsDate text-secondary">May 07, 2022 By Admin</span>
-                            <h4 class="cardsTitles newsTitles">ARE YOU READY TO MAKE IT AWESOME</h4>
-                            <span class="cardsTexts">Design is our playground. While we create an awesome experience, we
-                                like having fun. No animals</span>
+                        <div v-for="news in newsList" class="col-4 my-3">
+                            <img class="newsCards" :src="news.image" alt="latest-news">
+                            <span class="cardsTexts newsDate text-secondary">{{news.date}} By {{news.creator}}</span>
+                            <h4 class="cardsTitles newsTitles">{{news.title}}</h4>
+                            <span class="cardsTexts">{{news.text}}</span>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- banner loghi sponsor -->
+            <!-- BANNER LOGHI SPONSOR -->
             <section id="loghiSponsor" class="d-flex justify-content-center text-center">
-                <div>
-                    <img class="loghiIcons" src="./img/area-loghi/01-photo-love.png" alt="photo-love">
-                </div>
-                <div>
-                    <img class="loghiIcons" src="./img/area-loghi/02-square-lens.png" alt="square-lens">
-                </div>
-                <div>
-                    <img class="loghiIcons" src="./img/area-loghi/03-visual-films-photo.png" alt="visual-films-photo">
-                </div>
-                <div>
-                    <img class="loghiIcons" src="./img/area-loghi/04-photo-studio.png" alt="photo-studio">
-                </div>
-                <div>
-                    <img class="loghiIcons" src="./img/area-loghi/05-visual-films.png" alt="visual-films">
+                <div v-for="sponsor in sponsors">
+                    <img class="loghiIcons" :src="sponsor.logo" :alt="sponsor.name">
                 </div>
             </section>
 
@@ -386,7 +270,7 @@
                                 imperdiet.
                             </p>
                         </div>
-                        <!-- form - contact us -->
+                        <!-- CONTACT US - form -->
                         <div id="contactForm" class="col-6">
                             <div>
                                 <div class="d-flex my-4 justify-content-between">
